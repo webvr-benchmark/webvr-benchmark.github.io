@@ -47,7 +47,7 @@ img {
 }
 
 .hero {
-  padding: 12px 0 28px;
+  padding: 8px 0 20px;
   text-align: center;
 }
 
@@ -60,10 +60,10 @@ h2 {
 }
 
 h1 {
-  max-width: 16ch;
+  max-width: 20ch;
   margin: 0 auto;
-  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
-  line-height: 1.1;
+  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+  line-height: 1.16;
 }
 
 h2 {
@@ -90,7 +90,7 @@ pre,
   flex-wrap: wrap;
   gap: 8px 18px;
   max-width: 880px;
-  margin: 22px auto 8px;
+  margin: 16px auto 8px;
   color: var(--text);
 }
 
@@ -108,7 +108,7 @@ pre,
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .link-pill {
