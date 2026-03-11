@@ -181,6 +181,74 @@ pre,
   border-color: #b8c6d3;
 }
 
+.page-back {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.leaderboard-hero {
+  padding-bottom: 10px;
+}
+
+.leaderboard-title {
+  max-width: none;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.leaderboard-subtitle {
+  width: min(100%, var(--content-width));
+  margin: 12px auto 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.leaderboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.leader-card {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+
+.leader-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.leader-rank,
+.leader-score,
+.leader-meta {
+  margin: 0;
+}
+
+.leader-rank {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.leader-score {
+  font-weight: 600;
+}
+
+.leader-meta {
+  color: var(--muted);
+}
+
+.leaderboard-table tbody tr:nth-child(-n + 3):not(.group-row) {
+  background: #f8fbff;
+}
+
+.group-row td {
+  background: var(--soft);
+  font-weight: 600;
+}
+
 .section {
   padding: 26px 0 10px;
   border-top: 1px solid var(--line);
@@ -293,6 +361,10 @@ pre {
   .two-col {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .leaderboard-cards {
+    grid-template-columns: 1fr;
   }
 
   h2 {

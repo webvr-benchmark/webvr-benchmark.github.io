@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebVR Leaderboard</title>
+    <meta
+      name="description"
+      content="Leaderboard for WebVR: Benchmarking Multimodal LLMs for WebPage Recreation from Videos via Human-Aligned Visual Rubrics."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero leaderboard-hero">
+        <p class="page-back"><a href="index.html">Back to Project Page</a></p>
+        <h1 class="leaderboard-title">WebVR Leaderboard</h1>
+        <p class="leaderboard-subtitle">
+          Full results from the WebVR benchmark. Scores are reported for Global
+          Aesthetics (GA), Navigation and Footer (NF), Section-Specific Layouts
+          (SSL), Interaction and Motion (IM), and Overall.
+        </p>
+      </header>
+
+      <main>
+        <section class="section">
+          <h2>Top Models</h2>
+          <div class="leaderboard-cards">
+            <article class="leader-card">
+              <p class="leader-rank">#1</p>
+              <h3>Kimi-K2.5</h3>
+              <p class="leader-score">79.14 Overall</p>
+              <p class="leader-meta">Open-source</p>
+            </article>
+            <article class="leader-card">
+              <p class="leader-rank">#2</p>
+              <h3>Claude-Sonnet-4.6</h3>
+              <p class="leader-score">78.49 Overall</p>
+              <p class="leader-meta">Closed-source</p>
+            </article>
+            <article class="leader-card">
+              <p class="leader-rank">#3</p>
+              <h3>GPT-5.2-Thinking</h3>
+              <p class="leader-score">77.93 Overall</p>
+              <p class="leader-meta">Closed-source</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Overall Ranking</h2>
+          <div class="table-wrap">
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Model</th>
+                  <th>Type</th>
+                  <th>GA</th>
+                  <th>NF</th>
+                  <th>SSL</th>
+                  <th>IM</th>
+                  <th>Overall</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Kimi-K2.5</td><td>Open-source</td><td>87.44</td><td>89.21</td><td>79.26</td><td>60.10</td><td>79.14</td></tr>
+                <tr><td>2</td><td>Claude-Sonnet-4.6</td><td>Closed-source</td><td>87.16</td><td>89.37</td><td>78.87</td><td>59.06</td><td>78.49</td></tr>
+                <tr><td>3</td><td>GPT-5.2-Thinking</td><td>Closed-source</td><td>89.76</td><td>89.08</td><td>77.27</td><td>59.97</td><td>77.93</td></tr>
+                <tr><td>4</td><td>Claude-Opus-4.6</td><td>Closed-source</td><td>87.66</td><td>87.98</td><td>78.60</td><td>54.33</td><td>77.33</td></tr>
+                <tr><td>5</td><td>Gemini-3.1-Pro-Preview</td><td>Closed-source</td><td>88.30</td><td>87.29</td><td>77.09</td><td>56.50</td><td>76.69</td></tr>
+                <tr><td>6</td><td>Seed-2.0-Pro</td><td>Closed-source</td><td>82.88</td><td>86.27</td><td>73.35</td><td>45.88</td><td>71.88</td></tr>
+                <tr><td>7</td><td>Gemini-3.0-Flash</td><td>Closed-source</td><td>84.05</td><td>85.19</td><td>67.74</td><td>48.43</td><td>69.49</td></tr>
+                <tr><td>8</td><td>Gemini-3.0-Pro</td><td>Closed-source</td><td>80.84</td><td>81.79</td><td>66.31</td><td>46.86</td><td>67.32</td></tr>
+                <tr><td>9</td><td>Gemini-2.5-Pro</td><td>Closed-source</td><td>78.59</td><td>80.17</td><td>59.56</td><td>48.66</td><td>63.09</td></tr>
+                <tr><td>10</td><td>Seed-1.8</td><td>Closed-source</td><td>75.06</td><td>77.95</td><td>62.21</td><td>36.33</td><td>61.98</td></tr>
+                <tr><td>11</td><td>Qwen3.5-397B-A17B</td><td>Open-source</td><td>80.46</td><td>76.62</td><td>58.81</td><td>41.96</td><td>61.33</td></tr>
+                <tr><td>12</td><td>Claude-Sonnet-3.7</td><td>Closed-source</td><td>76.38</td><td>80.54</td><td>59.26</td><td>37.38</td><td>61.21</td></tr>
+                <tr><td>13</td><td>Gemini-2.5-Flash</td><td>Closed-source</td><td>71.95</td><td>70.90</td><td>51.52</td><td>39.76</td><td>55.62</td></tr>
+                <tr><td>14</td><td>Qwen3-VL-235B-A22B-Thinking</td><td>Open-source</td><td>61.20</td><td>68.04</td><td>43.11</td><td>29.30</td><td>46.80</td></tr>
+                <tr><td>15</td><td>GPT-4.1</td><td>Closed-source</td><td>61.91</td><td>64.42</td><td>42.70</td><td>26.71</td><td>45.85</td></tr>
+                <tr><td>16</td><td>Qwen3-VL-235B-A22B-Instruct</td><td>Open-source</td><td>51.06</td><td>52.65</td><td>40.09</td><td>22.12</td><td>40.71</td></tr>
+                <tr><td>17</td><td>Qwen3-VL-30B-A3B-Thinking</td><td>Open-source</td><td>53.38</td><td>60.47</td><td>33.49</td><td>20.22</td><td>37.69</td></tr>
+                <tr><td>18</td><td>Qwen3-VL-30B-A3B-Instruct</td><td>Open-source</td><td>33.33</td><td>34.87</td><td>17.71</td><td>12.67</td><td>21.44</td></tr>
+                <tr><td>19</td><td>GLM-4.6V</td><td>Open-source</td><td>22.78</td><td>15.42</td><td>7.17</td><td>14.35</td><td>11.42</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>By Model Group</h2>
+          <div class="table-wrap">
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>Group</th>
+                  <th>Model</th>
+                  <th>GA</th>
+                  <th>NF</th>
+                  <th>SSL</th>
+                  <th>IM</th>
+                  <th>Overall</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="group-row"><td colspan="7">Open-source Models</td></tr>
+                <tr><td>Open-source</td><td>GLM-4.6V</td><td>22.78</td><td>15.42</td><td>7.17</td><td>14.35</td><td>11.42</td></tr>
+                <tr><td>Open-source</td><td>Qwen3-VL-30B-A3B-Instruct</td><td>33.33</td><td>34.87</td><td>17.71</td><td>12.67</td><td>21.44</td></tr>
+                <tr><td>Open-source</td><td>Qwen3-VL-30B-A3B-Thinking</td><td>53.38</td><td>60.47</td><td>33.49</td><td>20.22</td><td>37.69</td></tr>
+                <tr><td>Open-source</td><td>Qwen3-VL-235B-A22B-Instruct</td><td>51.06</td><td>52.65</td><td>40.09</td><td>22.12</td><td>40.71</td></tr>
+                <tr><td>Open-source</td><td>Qwen3-VL-235B-A22B-Thinking</td><td>61.20</td><td>68.04</td><td>43.11</td><td>29.30</td><td>46.80</td></tr>
+                <tr><td>Open-source</td><td>Qwen3.5-397B-A17B</td><td>80.46</td><td>76.62</td><td>58.81</td><td>41.96</td><td>61.33</td></tr>
+                <tr><td>Open-source</td><td>Kimi-K2.5</td><td>87.44</td><td>89.21</td><td>79.26</td><td>60.10</td><td>79.14</td></tr>
+                <tr class="group-row"><td colspan="7">Closed-source Models</td></tr>
+                <tr><td>Closed-source</td><td>GPT-4.1</td><td>61.91</td><td>64.42</td><td>42.70</td><td>26.71</td><td>45.85</td></tr>
+                <tr><td>Closed-source</td><td>GPT-5.2-Thinking</td><td>89.76</td><td>89.08</td><td>77.27</td><td>59.97</td><td>77.93</td></tr>
+                <tr><td>Closed-source</td><td>Gemini-2.5-Flash</td><td>71.95</td><td>70.90</td><td>51.52</td><td>39.76</td><td>55.62</td></tr>
+                <tr><td>Closed-source</td><td>Gemini-2.5-Pro</td><td>78.59</td><td>80.17</td><td>59.56</td><td>48.66</td><td>63.09</td></tr>
+                <tr><td>Closed-source</td><td>Gemini-3.0-Flash</td><td>84.05</td><td>85.19</td><td>67.74</td><td>48.43</td><td>69.49</td></tr>
+                <tr><td>Closed-source</td><td>Gemini-3.0-Pro</td><td>80.84</td><td>81.79</td><td>66.31</td><td>46.86</td><td>67.32</td></tr>
+                <tr><td>Closed-source</td><td>Gemini-3.1-Pro-Preview</td><td>88.30</td><td>87.29</td><td>77.09</td><td>56.50</td><td>76.69</td></tr>
+                <tr><td>Closed-source</td><td>Claude-Sonnet-3.7</td><td>76.38</td><td>80.54</td><td>59.26</td><td>37.38</td><td>61.21</td></tr>
+                <tr><td>Closed-source</td><td>Claude-Sonnet-4.6</td><td>87.16</td><td>89.37</td><td>78.87</td><td>59.06</td><td>78.49</td></tr>
+                <tr><td>Closed-source</td><td>Claude-Opus-4.6</td><td>87.66</td><td>87.98</td><td>78.60</td><td>54.33</td><td>77.33</td></tr>
+                <tr><td>Closed-source</td><td>Seed-1.8</td><td>75.06</td><td>77.95</td><td>62.21</td><td>36.33</td><td>61.98</td></tr>
+                <tr><td>Closed-source</td><td>Seed-2.0-Pro</td><td>82.88</td><td>86.27</td><td>73.35</td><td>45.88</td><td>71.88</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
