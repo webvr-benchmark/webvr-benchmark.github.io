@@ -11,234 +11,102 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
+    <div class="container">
       <header class="hero">
-        <nav class="topbar">
-          <span class="brand">WebVR</span>
-          <div class="topbar-links">
-            <a href="#abstract">Abstract</a>
-            <a href="#results">Results</a>
-            <a href="#resources">Resources</a>
-            <a href="#citation">Citation</a>
-          </div>
-        </nav>
+        <h1>
+          WebVR: Benchmarking Multimodal LLMs for WebPage Recreation from
+          Videos via Human-Aligned Visual Rubrics
+        </h1>
+        <div class="authors">
+          <span>Yuhong Dai</span>
+          <span>Yanlin Lai</span>
+          <span>Mitt Huang</span>
+          <span>Hangyu Guo</span>
+          <span>Dingming Li</span>
+          <span>Hongbo Peng</span>
+          <span>Haodong Li</span>
+          <span>Yingxiu Zhao</span>
+          <span>Haoran Lyu</span>
+          <span>Zheng Ge</span>
+          <span>Xiangyu Zhang</span>
+          <span>Daxin Jiang</span>
+        </div>
+        <p class="affiliations">StepFun and Tsinghua University</p>
 
-        <div class="hero-grid">
-          <section class="hero-copy">
-            <p class="eyebrow">Project Page</p>
-            <h1>
-              WebVR: Benchmarking Multimodal LLMs for WebPage Recreation from
-              Videos via Human-Aligned Visual Rubrics
-            </h1>
-            <p class="authors">
-              Yuhong Dai, Yanlin Lai, Mitt Huang, Hangyu Guo, Dingming Li,
-              Hongbo Peng, Haodong Li, Yingxiu Zhao, Haoran Lyu, Zheng Ge,
-              Xiangyu Zhang, Daxin Jiang
-            </p>
-            <p class="affiliations">StepFun, Tsinghua University</p>
-
-            <div class="cta-row">
-              <a class="button primary" href="assets/paper.pdf">Paper</a>
-              <a class="button" href="https://github.com/broalantaps/WebVR">Code</a>
-              <a class="button" href="https://huggingface.co/broalantaps/WebVR">Hugging Face</a>
-            </div>
-
-            <ul class="hero-stats">
-              <li>
-                <strong>175</strong>
-                <span>benchmark webpages</span>
-              </li>
-              <li>
-                <strong>19</strong>
-                <span>MLLMs evaluated</span>
-              </li>
-              <li>
-                <strong>96%</strong>
-                <span>agreement with human preference</span>
-              </li>
-            </ul>
-          </section>
-
-          <aside class="hero-panel">
-            <div class="metric-card">
-              <p class="metric-label">Overview</p>
-              <p class="metric-title">
-                Benchmarking webpage recreation from demonstration videos.
-              </p>
-              <p class="metric-body">
-                WebVR evaluates whether models can recreate layout, style, and
-                dynamic interactions directly from webpage demonstration videos.
-              </p>
-            </div>
-            <div class="scoreboard">
-              <div class="scoreboard-head">
-                <span>Top overall results</span>
-                <span>Overall</span>
-              </div>
-              <div class="score-row">
-                <span>Kimi-K2.5</span>
-                <strong>79.14</strong>
-              </div>
-              <div class="score-row">
-                <span>Claude-Sonnet-4.6</span>
-                <strong>78.49</strong>
-              </div>
-              <div class="score-row">
-                <span>GPT-5.2-Thinking</span>
-                <strong>77.93</strong>
-              </div>
-              <p class="score-note">
-                Interaction and Motion remains the hardest dimension, with the
-                best score at 60.10.
-              </p>
-            </div>
-          </aside>
+        <div class="links">
+          <a class="link-pill" href="assets/paper.pdf">Paper</a>
+          <a class="link-pill" href="https://github.com/broalantaps/WebVR">Code</a>
+          <a class="link-pill" href="https://huggingface.co/broalantaps/WebVR">Hugging Face</a>
         </div>
       </header>
 
       <main>
-        <section class="section section-tight" id="abstract">
-          <div class="section-heading">
-            <p class="section-kicker">Abstract</p>
-            <h2>Evaluating webpage recreation from videos rather than static screenshots.</h2>
+        <section class="section" id="abstract">
+          <h2>Abstract</h2>
+          <div class="content">
+            <p>
+            Existing web-generation benchmarks rely mainly on text prompts or
+            static screenshots. WebVR studies a harder setting: recreating a
+            webpage from a demonstration video, where models must recover not
+            only layout and visual style but also transitions, motion, and
+            interaction flow. The benchmark contains 175 synthesized webpages
+            from diverse categories and evaluates outputs with a fine-grained,
+            human-aligned visual rubric spanning aesthetics, persistent UI,
+            section-level layout, and interaction quality. Results on 19 models
+            show that current multimodal LLMs are substantially better at
+            recovering global appearance than dynamic behavior.
+            </p>
           </div>
-          <p class="lead">
-            Existing web-generation benchmarks are mostly built around text
-            prompts or static screenshots. WebVR shifts the task to
-            demonstration videos, which carry richer evidence about layout,
-            transitions, motion continuity, and interaction flow. The benchmark
-            contains 175 synthesized webpages from diverse categories and
-            evaluates generated outputs with a fine-grained visual rubric
-            covering aesthetics, structure, section layout, and motion. Across
-            19 models, WebVR shows that modern MLLMs can often recover global
-            style cues, but still struggle to faithfully implement dynamic
-            behavior and fine-grained webpage details.
-          </p>
         </section>
 
         <section class="section">
-          <div class="feature-grid">
-            <article class="feature-card">
-              <p class="card-kicker">Task</p>
-              <h3>Video-conditioned webpage recreation</h3>
-              <p>
-                Each model receives a reference screen-recording video and a set
-                of visual assets, then produces a standalone executable HTML
-                page for comparison against the reference behavior.
-              </p>
-            </article>
-            <article class="feature-card">
-              <p class="card-kicker">Data</p>
-              <h3>Controlled synthesis to reduce contamination</h3>
-              <p>
-                The benchmark is constructed through captioning,
-                semantic re-theming, asset grounding, multi-model generation,
-                and rubric-based filtering rather than directly crawling
-                existing webpages.
-              </p>
-            </article>
-            <article class="feature-card">
-              <p class="card-kicker">Evaluation</p>
-              <h3>Human-aligned visual rubrics</h3>
-              <p>
-                Rubrics are decomposed into atomic binary checks over Global
-                Aesthetics, Navigation and Footer, Section-Specific Layouts, and
-                Interaction and Motion.
-              </p>
-            </article>
+          <h2>Overview</h2>
+          <div class="content">
+            <p>
+              WebVR evaluates video-conditioned webpage recreation. Each model
+              receives a reference screen-recording video together with visual
+              assets, and is asked to generate a standalone executable HTML
+              page.
+            </p>
+            <p>
+              To reduce contamination, benchmark instances are synthesized
+              through structured captioning, semantic re-theming, asset
+              grounding, candidate generation, and rubric-based filtering,
+              instead of directly reusing existing public webpages.
+            </p>
+            <p>
+              Evaluation is organized into four dimensions: Global Aesthetics
+              (GA), Navigation and Footer (NF), Section-Specific Layouts (SSL),
+              and Interaction and Motion (IM).
+            </p>
           </div>
-        </section>
-
-        <section class="section visual-section">
-          <div class="section-heading">
-            <p class="section-kicker">Overview</p>
-            <h2>Benchmark overview</h2>
-          </div>
-          <div class="visual-grid">
-            <figure class="visual-card">
-              <img src="assets/images/case_study.jpg" alt="Case study from the WebVR paper" />
+          <figure class="figure figure-wide">
+              <img
+                src="assets/images/case_study.jpg"
+                alt="Case study from the WebVR paper"
+              />
               <figcaption>
-                A representative example showing the target page, model output,
-                and rendered recreation comparison.
+                Example benchmark instance and recreation result.
               </figcaption>
-            </figure>
-            <div class="rubric-card">
-              <h3>Rubric dimensions</h3>
-              <ul class="rubric-list">
-                <li><span>GA</span><p>Global color mood, typography, and visual coherence.</p></li>
-                <li><span>NF</span><p>Header, menu, footer, and persistent UI structure.</p></li>
-                <li><span>SSL</span><p>Section-level hierarchy, spacing, alignment, and layout fidelity.</p></li>
-                <li><span>IM</span><p>Hover effects, transitions, scroll-triggered behaviors, and motion quality.</p></li>
-              </ul>
-            </div>
-          </div>
+          </figure>
         </section>
 
         <section class="section" id="results">
-          <div class="section-heading">
-            <p class="section-kicker">Results</p>
-            <h2>Main results</h2>
+          <h2>Main Results</h2>
+          <div class="content">
+            <p class="section-intro">
+              The strongest models achieve high scores on global style and
+              persistent structure, but interaction and motion remain the main
+              bottleneck.
+            </p>
           </div>
-
-          <div class="results-layout">
-            <div class="result-summary">
-              <div class="summary-card">
-                <p class="summary-label">Top overall model</p>
-                <h3>Kimi-K2.5</h3>
-                <p class="summary-score">79.14 overall</p>
-              </div>
-              <div class="summary-card">
-                <p class="summary-label">Top judge alignment</p>
-                <h3>Kimi-K2.5 judge</h3>
-                <p class="summary-score">96.0% with code + video</p>
-              </div>
-            </div>
-
-            <div class="dimension-panel">
-              <div class="dimension-row">
-                <div class="dimension-copy">
-                  <span>Average difficulty ordering</span>
-                  <strong>GA &gt; NF &gt; SSL &gt; IM</strong>
-                </div>
-              </div>
-              <div class="bar-group">
-                <div class="bar-label">
-                  <span>Global Aesthetics</span>
-                  <strong>72.57</strong>
-                </div>
-                <div class="bar-track"><div class="bar-fill ga"></div></div>
-              </div>
-              <div class="bar-group">
-                <div class="bar-label">
-                  <span>Navigation and Footer</span>
-                  <strong>72.09</strong>
-                </div>
-                <div class="bar-track"><div class="bar-fill nf"></div></div>
-              </div>
-              <div class="bar-group">
-                <div class="bar-label">
-                  <span>Section-Specific Layouts</span>
-                  <strong>43.27</strong>
-                </div>
-                <div class="bar-track"><div class="bar-fill ssl"></div></div>
-              </div>
-              <div class="bar-group">
-                <div class="bar-label">
-                  <span>Interaction and Motion</span>
-                  <strong>38.44</strong>
-                </div>
-                <div class="bar-track"><div class="bar-fill im"></div></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="table-card">
+          <div class="table-wrap">
             <table>
               <thead>
                 <tr>
@@ -294,89 +162,74 @@
               </tbody>
             </table>
           </div>
+          <div class="content">
+            <p class="note">
+            Across all 19 evaluated models, the average difficulty ordering is
+            GA &gt; NF &gt; SSL &gt; IM, indicating that dynamic interaction
+            fidelity remains substantially harder than recovering static
+            appearance.
+            </p>
+          </div>
         </section>
 
         <section class="section">
-          <div class="section-heading">
-            <p class="section-kicker">Reliability</p>
-            <h2>Judge reliability</h2>
-          </div>
-          <div class="feature-grid two-up">
-            <article class="feature-card emphasis">
-              <h3>Without visual rubric</h3>
-              <p>
-                Agreement with human experts stays compressed, ranging from
-                59.3% to 66.7% on average across different modalities.
-              </p>
-            </article>
-            <article class="feature-card emphasis">
-              <h3>With visual rubric</h3>
-              <p>
-                Joint code-and-video judging rises to 86.7% average agreement,
-                and Kimi-K2.5 reaches 96.0% alignment with human preference.
-              </p>
-            </article>
+          <h2>Judge Reliability</h2>
+          <div class="content">
+            <p>
+            The rubric-guided evaluation protocol closely tracks human
+            preference. When both code and rendered video are provided to the
+            judge, Kimi-K2.5 reaches 96.0% agreement with human experts on a
+            50-instance preference study. Without the visual rubric, agreement
+            is substantially lower.
+            </p>
           </div>
         </section>
 
-        <section class="section visual-section">
-          <div class="section-heading">
-            <p class="section-kicker">Failure Modes</p>
-            <h2>Representative failure cases</h2>
-          </div>
-          <div class="visual-grid reverse">
-            <div class="rubric-card">
-              <h3>Representative failure types</h3>
-              <ul class="failure-list">
-                <li><strong>Structural collapse:</strong> invalid or nearly blank renderings.</li>
-                <li><strong>Semantic divergence:</strong> coherent pages that ignore the demonstrated layout and theme.</li>
-                <li><strong>Asset misplacement:</strong> correct high-level structure but wrong images or spatial grounding.</li>
-              </ul>
+        <section class="section">
+          <h2>Failure Cases</h2>
+          <div class="two-col">
+            <div class="content content-left">
+              <p>
+                Representative errors fall into three categories: structural
+                collapse, semantic divergence, and asset misplacement.
+              </p>
+              <p>
+                Weak models may fail to produce a usable page at all. Mid-tier
+                models often generate plausible but unrelated templates. Strong
+                models usually recover the overall structure while still making
+                errors in fine-grained grounding and spatial placement.
+              </p>
             </div>
-            <figure class="visual-card">
-              <img src="assets/images/bad_case.jpg" alt="Failure cases on WebVR benchmark" />
-              <figcaption>
-                The paper compares failures from blank or malformed outputs to
-                near-perfect recreations with only subtle overlap issues.
-              </figcaption>
+            <figure class="figure">
+              <img
+                src="assets/images/bad_case.jpg"
+                alt="Failure cases on the WebVR benchmark"
+              />
+              <figcaption>Representative failure cases across model tiers.</figcaption>
             </figure>
           </div>
         </section>
 
-        <section class="section resources" id="resources">
-          <div class="section-heading">
-            <p class="section-kicker">Resources</p>
-            <h2>Resources</h2>
-          </div>
-          <div class="resource-grid">
-            <a class="resource-card" href="assets/paper.pdf">
-              <span class="resource-tag">PDF</span>
-              <h3>Paper</h3>
-              <p>Read the full manuscript and experimental details.</p>
-            </a>
-            <a class="resource-card" href="https://github.com/broalantaps/WebVR">
-              <span class="resource-tag">GitHub</span>
-              <h3>Code & Benchmark</h3>
-              <p>Dataset, evaluation toolkit, and baseline results.</p>
-            </a>
-            <a class="resource-card" href="https://huggingface.co/broalantaps/WebVR">
-              <span class="resource-tag">Hugging Face</span>
-              <h3>Hosted Assets</h3>
-              <p>Access the benchmark resources through Hugging Face.</p>
-            </a>
+        <section class="section" id="resources">
+          <h2>Resources</h2>
+          <div class="content">
+            <ul class="resource-list">
+              <li><a href="assets/paper.pdf">Paper PDF</a></li>
+              <li><a href="https://github.com/broalantaps/WebVR">Code and benchmark</a></li>
+              <li><a href="https://huggingface.co/broalantaps/WebVR">Hugging Face release</a></li>
+            </ul>
           </div>
         </section>
 
-        <section class="section citation-section" id="citation">
-          <div class="section-heading">
-            <p class="section-kicker">Citation</p>
-            <h2>Cite WebVR</h2>
-          </div>
-          <pre class="citation-block"><code>@article{dai2026webvr,
+        <section class="section" id="citation">
+          <h2>Citation</h2>
+          <div class="content">
+            <pre><code>@article{dai2026webvr,
   title   = {WebVR: Benchmarking Multimodal LLMs for WebPage Recreation from Videos via Human-Aligned Visual Rubrics},
   author  = {Dai, Yuhong and Lai, Yanlin and Huang, Mitt and Guo, Hangyu and Li, Dingming and Peng, Hongbo and Li, Haodong and Zhao, Yingxiu and Lyu, Haoran and Ge, Zheng and Zhang, Xiangyu and Jiang, Daxin},
   year    = {2026}
 }</code></pre>
+          </div>
         </section>
       </main>
     </div>
