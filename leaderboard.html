@@ -26,37 +26,117 @@
           Aesthetics (GA), Navigation and Footer (NF), Section-Specific Layouts
           (SSL), Interaction and Motion (IM), and Overall.
         </p>
+        <div class="leaderboard-links">
+          <a class="link-pill" href="assets/paper.pdf">Paper</a>
+          <a class="link-pill" href="https://github.com/broalantaps/WebVR">Code</a>
+          <a class="link-pill" href="https://huggingface.co/datasets/BroAlanTaps/WebVR">Hugging Face</a>
+        </div>
       </header>
 
       <main>
         <section class="section">
+          <h2>At a Glance</h2>
+          <div class="leaderboard-stats">
+            <article class="stat-card">
+              <p class="stat-label">Models Evaluated</p>
+              <p class="stat-value">19</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">Best Overall</p>
+              <p class="stat-value">79.14</p>
+              <p class="stat-caption">Kimi-K2.5</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">Hardest Dimension</p>
+              <p class="stat-value">IM</p>
+              <p class="stat-caption">Interaction and Motion</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">Best Open-source</p>
+              <p class="stat-value">79.14</p>
+              <p class="stat-caption">Kimi-K2.5</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
           <h2>Top Models</h2>
           <div class="leaderboard-cards">
-            <article class="leader-card">
+            <article class="leader-card leader-card-first">
               <p class="leader-rank">#1</p>
               <h3>Kimi-K2.5</h3>
               <p class="leader-score">79.14 Overall</p>
               <p class="leader-meta">Open-source</p>
+              <ul class="leader-metrics">
+                <li>GA 87.44</li>
+                <li>NF 89.21</li>
+                <li>SSL 79.26</li>
+                <li>IM 60.10</li>
+              </ul>
             </article>
             <article class="leader-card">
               <p class="leader-rank">#2</p>
               <h3>Claude-Sonnet-4.6</h3>
               <p class="leader-score">78.49 Overall</p>
               <p class="leader-meta">Closed-source</p>
+              <ul class="leader-metrics">
+                <li>GA 87.16</li>
+                <li>NF 89.37</li>
+                <li>SSL 78.87</li>
+                <li>IM 59.06</li>
+              </ul>
             </article>
             <article class="leader-card">
               <p class="leader-rank">#3</p>
               <h3>GPT-5.2-Thinking</h3>
               <p class="leader-score">77.93 Overall</p>
               <p class="leader-meta">Closed-source</p>
+              <ul class="leader-metrics">
+                <li>GA 89.76</li>
+                <li>NF 89.08</li>
+                <li>SSL 77.27</li>
+                <li>IM 59.97</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Dimension Leaders</h2>
+          <div class="dimension-grid">
+            <article class="dimension-card">
+              <p class="dimension-name">GA</p>
+              <h3>GPT-5.2-Thinking</h3>
+              <p class="dimension-score">89.76</p>
+            </article>
+            <article class="dimension-card">
+              <p class="dimension-name">NF</p>
+              <h3>Claude-Sonnet-4.6</h3>
+              <p class="dimension-score">89.37</p>
+            </article>
+            <article class="dimension-card">
+              <p class="dimension-name">SSL</p>
+              <h3>Kimi-K2.5</h3>
+              <p class="dimension-score">79.26</p>
+            </article>
+            <article class="dimension-card">
+              <p class="dimension-name">IM</p>
+              <h3>Kimi-K2.5</h3>
+              <p class="dimension-score">60.10</p>
             </article>
           </div>
         </section>
 
         <section class="section">
           <h2>Overall Ranking</h2>
+          <div class="content">
+            <p class="note">
+              Models are sorted by overall score. The top three rows are
+              highlighted for quick comparison.
+            </p>
+          </div>
           <div class="table-wrap">
-            <table class="leaderboard-table">
+            <table class="leaderboard-table overall-table">
               <thead>
                 <tr>
                   <th>Rank</th>
@@ -96,6 +176,13 @@
 
         <section class="section">
           <h2>By Model Group</h2>
+          <div class="content">
+            <p class="note">
+              This view mirrors the grouping in the paper and makes it easier to
+              compare model families within open-source and closed-source
+              settings.
+            </p>
+          </div>
           <div class="table-wrap">
             <table class="leaderboard-table">
               <thead>
