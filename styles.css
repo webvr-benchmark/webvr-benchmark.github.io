@@ -88,19 +88,41 @@ pre,
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px 18px;
-  max-width: 880px;
+  gap: 8px 16px;
+  max-width: 920px;
   margin: 16px auto 8px;
   color: var(--text);
 }
 
 .authors span {
   white-space: nowrap;
+  font-weight: 600;
 }
 
 .affiliations {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 20px;
   margin: 0;
   color: var(--muted);
+}
+
+.author-notes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.authors sup,
+.affiliations sup,
+.author-notes sup {
+  font-size: 0.72em;
+  vertical-align: super;
 }
 
 .links {
@@ -108,7 +130,7 @@ pre,
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .link-pill {
