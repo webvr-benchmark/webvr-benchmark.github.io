@@ -379,6 +379,12 @@ pre,
   margin: 0;
 }
 
+.content-center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .content p {
   margin: 0 0 14px;
 }
@@ -396,6 +402,10 @@ pre,
 
 .figure {
   margin: 18px auto 0;
+}
+
+.figure-centered {
+  margin-top: 0;
 }
 
 .figure-wide {
