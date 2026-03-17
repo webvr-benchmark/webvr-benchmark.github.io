@@ -390,6 +390,10 @@ pre,
   align-items: start;
 }
 
+.two-col-centered {
+  align-items: center;
+}
+
 .figure {
   margin: 18px auto 0;
 }
